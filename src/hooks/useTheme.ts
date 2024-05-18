@@ -1,17 +1,19 @@
 import { useEffect } from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
-export const useTheme = () => {
-    const [theme, setTheme] = useLocalStorage("theme", "dark");
+type Theme = 'light' | 'dark';
 
-    const toggleTheme = () => {
-        setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
-    }
+export const useTheme = (): [Theme, () => void] => {
+  const [theme, setTheme] = useLocalStorage<Theme>("theme", "dark");
 
-    useEffect(() => {
-        document.body.className = "",
-        document.body.classList.add(theme);
-    }, [theme]);
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+  };
 
-    return [theme, toggleTheme];
-}
+  useEffect(() => {
+    document.body.className = "";
+    document.body.classList.add(theme);
+  }, [theme]);
+
+  return [theme, toggleTheme];
+};

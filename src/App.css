@@ -179,7 +179,7 @@ body.dark nav {
   margin: 0;
 }
 body.dark .logo {
-  color: var(--clr-grey-8);
+  color: var(--clr-grey-10);
 }
 .links a {
   color: var(--clr-grey-4);
@@ -192,10 +192,16 @@ body.dark .logo {
   padding: 0.5rem 1rem;
   transition: var(--transition);
 }
+body.dark .links a {
+  color: var(--clr-grey-8);
+}
 .links a:hover {
   background: var(--clr-black);
-  color: var(--clr-white);
+  color: var(--clr-black);
   padding-left: 1.5rem;
+}
+body.dark .links a:hover {
+  color: var(--clr-white);
 }
 .links-container {
   height: 0;
@@ -248,6 +254,12 @@ body.dark .logo {
   .social-icons a:hover {
     color: var(--clr-primary-7);
   }
+  body.dark .social-icons a {
+    color: var(--clr-grey-8);
+  }
+  body.dark .social-icons a:hover {
+    color: var(--clr-white);
+  }
   .darkmode-btn {
     background-color: transparent;
     border: none;
@@ -257,18 +269,15 @@ body.dark .logo {
     display: flex;
     align-items: center;
   }
-  
   .darkmode-btn:focus {
     outline: none; 
   }
-  
   .darkmode-icon {
     font-size: 24px; 
     color: #333; 
     margin-bottom: 5px;
     margin-left: 0.5rem;
   }
-  
   .darkmode-btn:hover .darkmode-icon {
     color: #666; 
   }

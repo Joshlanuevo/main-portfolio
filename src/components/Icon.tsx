@@ -1,6 +1,12 @@
 import React from "react";
 
-const Icon = ({ name, size = "16", className }) => {
+interface IconProps {
+  name: "day" | "night";
+  size?: string;
+  className?: string;
+}
+
+const Icon: React.FC<IconProps> = ({ name, size = "16", className }) => {
   switch (name) {
     case "day":
       return (
@@ -35,3 +41,4 @@ const Icon = ({ name, size = "16", className }) => {
 };
 
 export default Icon;
+
