@@ -33,7 +33,7 @@ const Header: React.FC = () => {
     <nav>
       <div className="nav-center">
         <div className="nav-header">
-          <img src={logo} className="logo" alt="logo" />
+          <h1 className="logo">Ivan</h1>
           <button className="nav-toggle" onClick={toggleLinks}>
             <FaBars />
           </button>
