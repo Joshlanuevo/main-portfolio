@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-
 /*
 =============== 
 Variables
@@ -43,8 +42,6 @@ Variables
   --fixed-width: 620px;
 }
 
-
-
 /*
 =============== 
 Global Styles
@@ -64,6 +61,15 @@ body {
   line-height: 1.5;
   font-size: 0.875rem;
 }
+body.dark {
+  background-color: #333;
+  color: #fff;
+}
+body.light {
+  background-color: #fff;
+  color: #000;
+}
+
 ul {
   list-style-type: none;
 }
@@ -142,6 +148,10 @@ nav {
   background: var(--clr-grey-10);
   border-bottom: 1px solid var(--clr-grey-9);
 }
+body.dark nav {
+  background: var(--clr-grey-2);
+  border-bottom: 1px solid var(--clr-grey-3);
+}
 .nav-header {
   display: flex;
   align-items: center;
@@ -175,10 +185,17 @@ nav {
   padding: 0.5rem 1rem;
   transition: var(--transition);
 }
+body.dark .links a {
+  color: var(--clr-grey-7);
+}
 .links a:hover {
   background: var(--clr-black);
   color: var(--clr-white);
   padding-left: 1.5rem;
+}
+body.dark .links a:hover {
+  background: var(--clr-white);
+  color: var(--clr-black);
 }
 .links-container {
   height: 0;
@@ -231,29 +248,31 @@ nav {
   .social-icons a:hover {
     color: var(--clr-primary-7);
   }
-  .darkmode-btn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  .darkmode-btn:focus {
-    outline: none; 
-  }
-  
-  .darkmode-icon {
-    font-size: 24px; 
-    color: #333; 
-    margin-bottom: 5px;
-    margin-left: 0.5rem;
-  }
-  
-  .darkmode-btn:hover .darkmode-icon {
-    color: #666; 
-  }
-  
+}
+.darkmode-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.darkmode-btn:focus {
+  outline: none;
+}
+.darkmode-icon {
+  font-size: 24px;
+  color: var(--clr-grey-5);
+  margin-bottom: 5px;
+  margin-left: 0.5rem;
+}
+body.dark .darkmode-icon {
+  color: var(--clr-grey-8);
+}
+.darkmode-btn:hover .darkmode-icon {
+  color: var(--clr-grey-6);
+}
+body.dark .darkmode-btn:hover .darkmode-icon {
+  color: var(--clr-grey-9);
 }
