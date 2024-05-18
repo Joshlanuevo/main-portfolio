@@ -44,22 +44,22 @@ export const links: Link[] = [
 export const social = [
   {
     id: 1,
-    url: "https://www.twitter.com",
+    url: "https://www.facebook.com/joshivanlanuevo",
     icon: <FaFacebook />
   },
   {
     id: 2,
-    url: "https://www.twitter.com",
+    url: "https://www.instagram.com/joshlanuevo/",
     icon: <FaInstagram />
   },
   {
     id: 3,
-    url: "https://www.twitter.com",
+    url: "https://www.linkedin.com/in/josh-ivan-lanuevo-3802ab287/",
     icon: <FaLinkedin />
   },
   {
     id: 4,
-    url: "https://www.twitter.com",
+    url: "https://github.com/Joshlanuevo",
     icon: <FaGithub />
   }
 ];
