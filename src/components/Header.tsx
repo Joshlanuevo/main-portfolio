@@ -3,6 +3,8 @@ import { FaBars } from 'react-icons/fa';
 import { links, social } from '../data/data';
 import logo from "../images/logo.png";
 import { TiWeatherSunny } from 'react-icons/ti';
+import Icon from './Icon';
+import { useTheme } from '../hooks/useTheme';
 
 
 // const logo ="https://raw.githubusercontent.com/sagar2022/myProjects/main/SAGARR/images/logos.png";
@@ -11,6 +13,7 @@ const Header: React.FC = () => {
   const [showLinks, setShowLinks] = useState(false);
   const linksContainerRef = useRef<HTMLDivElement | null>(null);
   const linksRef = useRef<HTMLUListElement | null>(null);
+  const [theme, toggleTheme] = useTheme();
   const toggleLinks = () => {
     setShowLinks(!showLinks);
   }
@@ -56,7 +59,9 @@ const Header: React.FC = () => {
               </li>
             );
           })}
-          <div><TiWeatherSunny /></div>
+        <button className='darkmode-btn' onClick={toggleTheme}>
+          <Icon name={theme === "dark" ? "day" : "night"} className="darkmode-icon" />
+        </button>
         </ul>
       </div>
     </nav>

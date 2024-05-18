@@ -165,7 +165,7 @@ nav {
   cursor: pointer;
 }
 .links a {
-  color: var(--clr-primary-5);
+  color: var(--clr-grey-4);
   font-size: 1rem;
   text-transform: capitalize;
   font-weight: 500;
@@ -177,7 +177,7 @@ nav {
 }
 .links a:hover {
   background: var(--clr-black);
-  color: var(--clr-black);
+  color: var(--clr-white);
   padding-left: 1.5rem;
 }
 .links-container {
@@ -231,4 +231,29 @@ nav {
   .social-icons a:hover {
     color: var(--clr-primary-7);
   }
+  .darkmode-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .darkmode-btn:focus {
+    outline: none; 
+  }
+  
+  .darkmode-icon {
+    font-size: 24px; 
+    color: #333; 
+    margin-bottom: 5px;
+    margin-left: 0.5rem;
+  }
+  
+  .darkmode-btn:hover .darkmode-icon {
+    color: #666; 
+  }
+  
 }
