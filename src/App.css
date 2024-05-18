@@ -191,18 +191,17 @@ body.dark .logo {
   display: block;
   padding: 0.5rem 1rem;
   transition: var(--transition);
+  cursor: pointer;
 }
 body.dark .links a {
   color: var(--clr-grey-8);
 }
 .links a:hover {
-  background: var(--clr-black);
-  color: var(--clr-white);
+  color: var(--clr-black);
   padding-left: 1.5rem;
 }
 body.dark .links a:hover {
-  background: var(--clr-white);
-  color: var(--clr-black);
+  color: var(--clr-white);
 }
 .links-container {
   height: 0;
@@ -283,3 +282,37 @@ body.dark .links a:hover {
     color: #666; 
   }
 }
+
+/*
+=============== 
+Main
+===============
+*/
+.portfolio-main {
+  margin-top: 900px;
+}
+
+/*
+=============== 
+About
+===============
+*/
+
+.portfolio-about {
+  margin-top: 900px;
+}
+
+/*
+=============== 
+Experience
+===============
+*/
+
+.portfolio-experience {
+  margin-top: 900px;
+}
+
+
+
+
+

@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaBars } from 'react-icons/fa';
-import { links, social } from '../data/data';
-import logo from "../images/logo.png";
-import { TiWeatherSunny } from 'react-icons/ti';
+import { social } from '../data/data';
 import Icon from './Icon';
 import { useTheme } from '../hooks/useTheme';
+
 
 
 // const logo ="https://raw.githubusercontent.com/sagar2022/myProjects/main/SAGARR/images/logos.png";
@@ -17,6 +16,14 @@ const Header: React.FC = () => {
   const toggleLinks = () => {
     setShowLinks(!showLinks);
   }
+
+  const handleNavLinkClick = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      window.history.pushState(null, '', `${id}`);
+    }
+  };
 
   useEffect(() => {
     if (linksRef.current && linksContainerRef.current) {
@@ -40,14 +47,21 @@ const Header: React.FC = () => {
         </div>
         <div className="links-container" ref={linksContainerRef}>
           <ul className="links" ref={linksRef}>
-            {links.map((link) => {
-              const { id, url, text } = link;
-              return (
-                <li key={id}>
-                  <a href={url}>{text}</a>
-                </li>
-              )
-            })}
+            <li>
+              <a onClick={() => handleNavLinkClick("about")}>About</a>
+            </li>
+            <li>
+              <a onClick={() => handleNavLinkClick("experience")}>Experience</a>
+            </li>
+            <li>
+              <a onClick={() => handleNavLinkClick("projects")}>Projects</a>
+            </li>
+            <li>
+              <a onClick={() => handleNavLinkClick("skills")}>Skills</a>
+            </li>
+            <li>
+              <a onClick={() => handleNavLinkClick("contact")}>Contact</a>
+            </li>
           </ul>
         </div>
         <ul className="social-icons">
@@ -59,9 +73,9 @@ const Header: React.FC = () => {
               </li>
             );
           })}
-        <button className='darkmode-btn' onClick={toggleTheme}>
-          <Icon name={theme === "dark" ? "day" : "night"} className="darkmode-icon" />
-        </button>
+          <button className='darkmode-btn' onClick={toggleTheme}>
+            <Icon name={theme === "dark" ? "day" : "night"} className="darkmode-icon" />
+          </button>
         </ul>
       </div>
     </nav>
