@@ -57,9 +57,6 @@ const Header: React.FC = () => {
               <a onClick={() => handleNavLinkClick("projects")}>Projects</a>
             </li>
             <li>
-              <a onClick={() => handleNavLinkClick("skills")}>Skills</a>
-            </li>
-            <li>
               <a onClick={() => handleNavLinkClick("contact")}>Contact</a>
             </li>
           </ul>
