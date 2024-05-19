@@ -37,7 +37,7 @@ const Header: React.FC = () => {
   }, [showLinks]);
 
   return (
-    <nav>
+    <nav className="sticky-header">
       <div className="nav-center">
         <div className="nav-header">
           <h1 className="logo">Ivan</h1>

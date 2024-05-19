@@ -149,6 +149,9 @@ Navbar
 nav {
   background: var(--clr-grey-10);
   border-bottom: 1px solid var(--clr-grey-9);
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
 }
 body.dark nav {
   background: var(--clr-grey-2);
