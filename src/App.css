@@ -58,6 +58,7 @@ Global Styles
 body {
   font-family: "Roboto", sans-serif;
   color: var(--clr-grey-1);
+  background-color: red;
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -66,7 +67,7 @@ body.dark {
   color: #fff;
 }
 body.light {
-  background-color: #fff;
+  background-color: var(--clr-primary-9);
   color: #000;
 }
 
@@ -81,7 +82,7 @@ h2,
 h3,
 h4 {
   letter-spacing: var(--spacing);
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   line-height: 1.25;
   margin-bottom: 0.75rem;
 }
@@ -289,7 +290,6 @@ Main
 ===============
 */
 .portfolio-main {
-  margin-top: 900px;
 }
 
 /*
@@ -298,8 +298,129 @@ About
 ===============
 */
 
-.portfolio-about {
-  margin-top: 900px;
+.about {
+  padding: 80px 20px 200px 20px; 
+  background: var(--clr-grey-10);
+}
+
+.about-container {
+  max-width: 1170px; 
+  margin: 0 auto; 
+}
+
+.about h1 {
+  margin: 0; 
+  color: var(--clr-black);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 80px;
+  text-align: center; 
+  width: 100%; 
+}
+
+.about h2 {
+  color: var(--clr-grey-3);
+}
+
+.about h3 {
+  color: var(--clr-grey-3);
+}
+
+.about p {
+  margin: 0 0 10px 0;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
+.description {
+  width: 100%;
+  flex: 1 0 100%; 
+  margin-bottom: 20px; 
+}
+
+.tech-stack {
+  flex: 1 0 300px; 
+}
+
+.tech-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.tech-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.tech-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Dark mode styles for the About section */
+body.dark .about {
+  background: var(--clr-primary-2);
+}
+
+body.dark .about h1 {
+  color: var(--clr-grey-10);
+}
+
+body.dark .about h2,
+body.dark .about h3,
+body.dark .about p {
+  color: var(--clr-grey-7);
+}
+
+body.dark .tech-item {
+  border-color: var(--clr-grey-6);
+  background-color: var(--clr-primary-2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 60px 20px 150px 20px; 
+  }
+
+  .content {
+    flex-direction: column; 
+  }
+
+  .description {
+    margin-right: 0; 
+  }
+
+  .tech-stack {
+    width: 100%; 
+  }
+
+  .tech-item {
+    width: calc(33.33% - 20px); 
+  }
 }
 
 /*
