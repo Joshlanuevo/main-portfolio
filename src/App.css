@@ -172,8 +172,14 @@ body.dark nav {
   cursor: pointer;
 }
 .nav-toggle:hover {
-  color: var(--clr-primary-1);
+  color: var(--clr-black);
   transform: rotate(90deg);
+}
+body.dark .nav-toggle {
+  color: var(--clr-grey-10);
+}
+body.dark .nav-toggle:hover {
+  color: var(--clr-white);
 }
 .logo {
   font-size: 2rem;
@@ -201,11 +207,13 @@ body.dark .links a {
   color: var(--clr-grey-8);
 }
 .links a:hover {
-  color: var(--clr-black);
+  background-color: var(--clr-grey-3);
+  color: var(--clr-grey-10);
   padding-left: 1.5rem;
 }
 body.dark .links a:hover {
-  color: var(--clr-white);
+  background-color: var(--clr-grey-10);
+  color: var(--clr-grey-3);
 }
 .links-container {
   height: 0;
