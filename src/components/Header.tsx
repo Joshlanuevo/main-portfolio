@@ -3,12 +3,13 @@ import { FaBars } from 'react-icons/fa';
 import { social } from '../data/data';
 import Icon from './Icon';
 import { useTheme } from '../hooks/useTheme';
-
+import { useNavigate } from 'react-router-dom';
 
 
 // const logo ="https://raw.githubusercontent.com/sagar2022/myProjects/main/SAGARR/images/logos.png";
 
 const Header: React.FC = () => {
+  const navigate = useNavigate();
   const [showLinks, setShowLinks] = useState(false);
   const linksContainerRef = useRef<HTMLDivElement | null>(null);
   const linksRef = useRef<HTMLUListElement | null>(null);
@@ -23,6 +24,11 @@ const Header: React.FC = () => {
       element.scrollIntoView({ behavior: "smooth" });
       window.history.pushState(null, '', `${id}`);
     }
+  };
+
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    navigate('/');
   };
 
   useEffect(() => {
@@ -40,7 +46,7 @@ const Header: React.FC = () => {
     <nav className="sticky-header">
       <div className="nav-center">
         <div className="nav-header">
-          <h1 className="logo">Ivan</h1>
+          <h1 className="logo" onClick={handleLogoClick}>Ivan</h1>
           <button className="nav-toggle" onClick={toggleLinks}>
             <FaBars />
           </button>
