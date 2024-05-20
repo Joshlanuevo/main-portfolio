@@ -58,9 +58,9 @@ Global Styles
 body {
   font-family: "Roboto", sans-serif;
   color: var(--clr-grey-1);
-  background-color: red;
   line-height: 1.5;
   font-size: 0.875rem;
+  overflow-x: hidden;
 }
 body.dark {
   background-color: #333;
@@ -307,9 +307,99 @@ body.dark .links a:hover {
 Main
 ===============
 */
-.portfolio-main {
-  margin-top: 900px;
+
+.main {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  z-index: 0;
 }
+
+.main > *:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.main-avatar {
+  position: relative;
+  border-radius: 9999px;
+  height: 10rem;
+  width: 10rem;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-content {
+  z-index: 1;
+}
+
+.main-content h2 {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: var(--clr-grey-3);
+  padding-bottom: 0.5rem;
+  letter-spacing: 15px;
+  font-weight: 400;
+}
+
+body.dark .main-content h2 {
+  color: var(--clr-grey-7);
+}
+
+.main-content h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--clr-grey-3);
+  padding-left: 2.5rem; 
+  padding-right: 2.5rem;
+}
+
+body.dark .main-content h1 {
+  color: var(--clr-grey-9);
+}
+
+@media screen and (max-width: 1024px) {
+  .main-content h1 {
+    font-size: 1.2rem;
+  }
+}
+
+.circle-container {
+  position: absolute;
+  top: calc(50% - 10rem);
+  left: calc(50% - 5rem); 
+  width: 10rem; 
+  height: 10rem; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0; 
+}
+.circle-ping {
+  position: relative;
+  border: 2px solid var(--clr-grey-2);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+body.dark .circle-ping {
+  border: 2px solid var(--clr-grey-10);
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
 
 /*
 =============== 
@@ -320,7 +410,10 @@ About
 .about {
   padding: 80px 20px 200px 20px; 
   background: var(--clr-grey-10);
+  position: relative; 
+  z-index: 1; 
 }
+
 
 .about-container {
   max-width: 1170px; 
@@ -330,8 +423,10 @@ About
 .about h1 {
   margin: 0; 
   color: var(--clr-grey-3);
+  font-size: 2rem;
   position: relative;
   display: inline-block;
+  padding-top: 40px;
   padding-bottom: 80px;
   text-align: center; 
   width: 100%; 
@@ -342,7 +437,7 @@ About
   width: 100px; 
   border-bottom: 4px solid var(--clr-grey-3); 
   border-radius: 1000px;
-  margin-top: 80px; 
+  margin-top: 100px; 
   position: absolute; 
   left: 50%; 
   transform: translateX(-50%); 
@@ -354,10 +449,12 @@ body.dark .underline {
 
 .about h2 {
   color: var(--clr-grey-3);
+  font-size: 2rem;
 }
 
 .about h3 {
   color: var(--clr-grey-3);
+  font-size: 2rem;
 }
 
 .about p {
@@ -479,7 +576,7 @@ Projects
 
 /*
 =============== 
-Projects
+Contacts
 ===============
 */
 
