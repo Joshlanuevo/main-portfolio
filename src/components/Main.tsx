@@ -2,7 +2,7 @@ import React from 'react';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import BgParticles from './BgParticles';
 import BgCircle from './BgCircle';
-import killua from "../../public/images/killua.png"
+import logo from "../images/ivanskie.jpg"
 import { userData } from '../data/data';
 
 const Main = () => {
@@ -16,14 +16,13 @@ const Main = () => {
     <div className='main' id="main">
       <BgParticles />
       <BgCircle />
-      <img 
-        src={killua} 
-        alt="killua" 
-        className='main-avatar' 
-        width={200}
-        height={200}
-        style={{ objectFit: 'cover' }}
-      />
+      <div className="main-avatar-container">
+        <img 
+          src={logo} 
+          alt="killua" 
+          className='main-avatar' 
+        />
+      </div>
       <div className="main-content">
           <h2 className='main-job-title'>{userData.destination}</h2>
           <h1 className='main-typing-text'>

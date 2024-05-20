@@ -324,14 +324,18 @@ Main
   margin-top: 2rem;
 }
 
-.main-avatar {
+.main-avatar-container {
   position: relative;
-  border-radius: 9999px;
-  height: 10rem;
   width: 10rem;
+  height: 10rem; 
+  border-radius: 50%;
+  overflow: hidden; 
+}
+
+.main-avatar {
+  width: 100%;
+  height: 220px;
   object-fit: cover;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .main-content {
@@ -355,7 +359,7 @@ body.dark .main-content h2 {
   font-size: 3rem;
   font-weight: 600;
   color: var(--clr-grey-3);
-  padding-left: 2.5rem; 
+  padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
 
@@ -583,9 +587,3 @@ Contacts
 .portfolio-contact {
   margin-top: 900px;
 }
-
-
-
-
-
-
