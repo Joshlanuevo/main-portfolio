@@ -565,7 +565,30 @@ Experience
 */
 
 .portfolio-experience {
+  height: 100vh;
+}
 
+.experience {
+  padding: 80px 20px 200px 20px; 
+  background: var(--clr-primary-9);
+  position: relative; 
+  z-index: 1; 
+}
+
+body.dark .experience {
+  background: #333;
+}
+
+.experience h1 {
+  margin: 0; 
+  color: var(--clr-grey-3);
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  text-align: center; 
+  width: 100%; 
 }
 
 /*
