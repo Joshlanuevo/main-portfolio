@@ -85,4 +85,30 @@ export const userData = {
         { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
       ]
   },
+  experience: {
+    jobs: [
+      { 
+        title: "Android Developer",
+        date: "November 2023 - Present",
+        responsibilities: [
+          "Developed and maintained Android chat application using Kotlin and Java.",
+          "Collaborated with cross-functional teams to define, design, and ship new features.",
+          "Ensured the performance, quality, and responsiveness of applications.",
+          "Identified and corrected bottlenecks and fix bugs.",
+          "Worked with RESTful APIs to connect Android applications to back-end services."
+        ],
+        tech: "Kotlin and Java"
+      },
+      { 
+        title: "Front End Developer Intern",
+        date: "August 2023 - September 2023",
+        responsibilities: [
+          "Fixed broken links, ensuring a seamless user experience.",
+          "Conducted a comprehensive front-end cleanup to improve website functionality.",
+          "esolved minor issues on the front end.",
+        ],
+        tech: "React and NextJS"
+      },
+    ]
+  }
 }
