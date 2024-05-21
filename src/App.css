@@ -55,6 +55,32 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Width of the vertical scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track of the vertical scrollbar */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+}
+
+/* Handle of the vertical scrollbar */
+::-webkit-scrollbar-thumb {
+  background: var(--clr-grey-2); /* Color of the scrollbar handle */
+}
+
+/* Handle of the vertical scrollbar on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar handle on hover */
+}
+
+/* Dark mode scrollbar handle */
+body.dark ::-webkit-scrollbar-thumb {
+  background: var(--clr-grey-10); /* Color of the scrollbar handle in dark mode */
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: var(--clr-grey-1);
@@ -330,6 +356,11 @@ Main
   height: 10rem; 
   border-radius: 50%;
   overflow: hidden; 
+  border: 6px solid var(--clr-grey-2);
+}
+
+body.dark .main-avatar-container {
+  border: 6px solid var(--clr-grey-10);
 }
 
 .main-avatar {
@@ -570,13 +601,9 @@ Experience
 
 .experience {
   padding: 80px 20px 200px 20px; 
-  background: var(--clr-primary-9);
+  background: var(--clr-grey-10);
   position: relative; 
   z-index: 1; 
-}
-
-body.dark .experience {
-  background: #333;
 }
 
 .experience h1 {

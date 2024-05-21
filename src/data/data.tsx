@@ -80,14 +80,15 @@ export const userData = {
         { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
         { name: "NextJS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg " },
         { name: "Kotlin", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" },
+        { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
         { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
         { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
         { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
       ]
   },
   experience: {
-    jobs: [
-      { 
+    jobs: {
+      one: {
         title: "Android Developer",
         date: "November 2023 - Present",
         responsibilities: [
@@ -99,16 +100,17 @@ export const userData = {
         ],
         tech: "Kotlin and Java"
       },
-      { 
+      two: {
         title: "Front End Developer Intern",
         date: "August 2023 - September 2023",
         responsibilities: [
           "Fixed broken links, ensuring a seamless user experience.",
           "Conducted a comprehensive front-end cleanup to improve website functionality.",
-          "esolved minor issues on the front end.",
+          "Resolved minor issues on the front end."
         ],
         tech: "React and NextJS"
-      },
-    ]
+      }
+    }
   }
+  
 }
