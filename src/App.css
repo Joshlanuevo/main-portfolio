@@ -572,6 +572,10 @@ body.dark .tech-item {
     padding: 60px 20px 150px 20px; 
   }
 
+  .about h1 {
+    font-size: 2.5rem;
+  }
+
   .content {
     flex-direction: column; 
   }
@@ -601,7 +605,7 @@ Experience
 
 .experience {
   padding: 80px 20px 200px 20px; 
-  background: var(--clr-grey-10);
+  background: var(--clr-grey-9);
   position: relative; 
   z-index: 1; 
 }
@@ -616,6 +620,205 @@ Experience
   padding-bottom: 80px;
   text-align: center; 
   width: 100%; 
+}
+
+.experience-container {
+  max-width: 1280px; 
+  margin-left: auto;
+  margin-right: auto; 
+  padding-left: 1rem; 
+  padding-right: 1rem; 
+}
+
+.timeline-container {
+  position: relative;
+}
+
+.job-exp {
+  margin-bottom: 2rem; 
+  max-width: 28rem; 
+  margin-left: auto; 
+  margin-right: auto; 
+  position: relative; 
+  display: flex; 
+  align-items: center; 
+}
+
+.tree-connector {
+  position: absolute; 
+  top: 0; 
+  left: 50%; 
+  transform: translateY(50%); 
+  height: 100%; 
+  width: 0.25rem; 
+  background-color: var(--clr-grey-6); 
+  z-index: 1; 
+}
+
+.card {
+  background-color: var(--clr-white); 
+  padding: 1.5rem; 
+  border-radius: 0.5rem; 
+  box-shadow: 0 0 0 2px var(--clr-grey-6); 
+  margin-left: 1rem; 
+  position: relative; 
+  z-index: 10;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 0 4px var(--clr-white); 
+  z-index: -1;
+}
+
+.card h3 {
+  font-size: 1.5rem; 
+  font-weight: 500; 
+  color: var(--clr-grey-4); 
+}
+
+.card h4 {
+  font-size: 0.875rem; 
+  color: var(--clr-grey-4); 
+  margin-top: 0.5rem; 
+  margin-bottom: 0.5rem; 
+}
+
+.card .line {
+  margin-top: 1rem; 
+  border-top-width: 1px; 
+  border-color: var(--clr-grey-10); 
+  border-radius: 0.125rem; 
+  border-style: solid; 
+}
+
+.card .exp-date {
+  font-size: 0.875rem; 
+  color: var(--clr-grey-6);
+  margin-top: 0.5rem; 
+  margin-bottom: 0.5rem;
+}
+
+.card .responsibilities {
+  font-size: 0.875rem; 
+  color: var(--clr-grey-6); 
+}
+
+.card .responsibilities-title {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.responsibilities-desc {
+  list-style-type: disc; 
+  font-size: 16px;
+  padding-left: 1.25rem; 
+}
+
+.tree-connector-two {
+  position: absolute; 
+  top: 0; 
+  left: 50%; 
+  transform: translateY(25%); 
+  height: 100%; 
+  width: 0.25rem; 
+  background-color: var(--clr-grey-6); 
+}
+
+.outer-circle {
+  position: absolute; 
+  bottom: 0; 
+  left: 50%; 
+  transform: translateX(-50%) translateY(25%); 
+  width: 1rem; 
+  height: 1rem; 
+  background-color: var(--clr-grey-2); 
+  border-radius: 50%; 
+}
+
+.inner-circle {
+  position: absolute; 
+  bottom: 0; 
+  left: 12.5%; 
+  width: 1rem; 
+  height: 1rem; 
+  background-color: var(--clr-grey-2); 
+  border-radius: 50%; 
+  animation: ping 1s infinite; 
+}
+
+@keyframes ping {
+  75%, 100% {
+      transform: scale(2);
+      opacity: 0;
+  }
+}
+
+/* Dark mode styles for the About section */
+body.dark .experience {
+  background: #333;
+}
+
+body.dark .exp-title {
+  color: var(--clr-grey-10);
+  font-weight: bold;
+}
+
+body.dark .card .line {
+  border-color: var(--clr-grey-5); 
+}
+
+body.dark .experience h2,
+body.dark .experience h3,
+body.dark .experience p {
+  color: var(--clr-grey-9);
+}
+
+body.dark .responsibilities-title {
+  color: var(--clr-grey-10);
+}
+
+body.dark .experience h4 {
+  color: var(--clr-grey-10);
+}
+
+body.dark .card {
+  background: var(--clr-grey-4);
+  box-shadow: 0 0 0 2px var(--clr-grey-3); 
+}
+
+body.dark .card::before {
+  box-shadow: 0 0 0 4px var(--clr-grey-4); 
+}
+
+body.dark .outer-circle, .inner-circle {
+  background-color: var(--clr-grey-10); 
+}
+
+@media screen and (min-width: 640px) {
+  .experience-container {
+    padding-left: 1.5rem; 
+    padding-right: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .experience h1 {
+    font-size: 2.25rem; 
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .experience-container {
+    padding-left: 2rem; 
+    padding-right: 2rem; 
+  }
 }
 
 /*
