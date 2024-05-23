@@ -31,6 +31,16 @@ const Header: React.FC = () => {
     navigate('/');
   };
 
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      linksContainerRef.current &&
+      !linksContainerRef.current.contains(event.target as Node) &&
+      showLinks
+    ) {
+      setShowLinks(false);
+    }
+  };
+
   useEffect(() => {
     if (linksRef.current && linksContainerRef.current) {
       const linkHeights = linksRef.current.getBoundingClientRect().height;
@@ -40,6 +50,13 @@ const Header: React.FC = () => {
         linksContainerRef.current.style.height = '0px';
       }
     }
+  }, [showLinks]);
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, [showLinks]);
 
   return (
