@@ -797,8 +797,12 @@ body.dark .card::before {
   box-shadow: 0 0 0 4px var(--clr-grey-4); 
 }
 
-body.dark .outer-circle, .inner-circle {
+body.dark .outer-circle {
   background-color: var(--clr-grey-10); 
+}
+
+body.dark .inner-circle {
+  background-color: var(--clr-grey-7); 
 }
 
 @media screen and (min-width: 640px) {
@@ -828,7 +832,41 @@ Projects
 */
 
 .portfolio-projects {
-  margin-top: 900px;
+  height: 100vh;
+}
+
+.projects {
+  margin-top: 270px;
+  padding: 80px 20px 200px 20px; 
+  background: var(--clr-grey-10);
+  position: relative; 
+  z-index: 1; 
+}
+
+.projects h1 {
+  margin: 0; 
+  color: var(--clr-grey-3);
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  text-align: center; 
+  width: 100%; 
+}
+
+/* Media query for medium screens */
+@media (max-width: 992px) {
+  .projects {
+    margin-top: 300px;
+  }
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .projects {
+    margin-top: 400px;
+  }
 }
 
 /*
