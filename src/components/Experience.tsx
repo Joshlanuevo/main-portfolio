@@ -22,6 +22,7 @@ const Experience = () => {
               <hr className='line'/>
               <p className="exp-date">{experience.jobs.one.date}</p>
               <p className='responsibilities'>
+                <p className='project-type'>Project: {experience.jobs.one.project}</p>
                 <span className='responsibilities-title'>Responsibilities</span>
                 <ul className='responsibilities-desc'>
                   {experience.jobs.one.responsibilities.map(responsibility => (
@@ -47,6 +48,7 @@ const Experience = () => {
               <hr className='line'/>
               <p className="exp-date">{experience.jobs.two.date}</p>
               <p className='responsibilities'>
+              <p className='project-type'>Project: {experience.jobs.two.project}</p>
                 <span className='responsibilities-title'>Responsibilities</span>
                 <ul className='responsibilities-desc'>
                   {experience.jobs.two.responsibilities.map(responsibility => (

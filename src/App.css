@@ -710,6 +710,11 @@ Experience
   color: var(--clr-grey-6); 
 }
 
+.card .project-type {
+  font-size: 14px;
+  font-weight: 500;
+}
+
 .card .responsibilities-title {
   font-size: 17px;
   font-weight: bold;

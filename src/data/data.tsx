@@ -112,6 +112,7 @@ export const userData = {
       one: {
         title: "Android Developer",
         date: `November 2023 - Present (${monthCalculator('2023-11-01')} months)`,
+        project: "Chat Application",
         responsibilities: [
           "Developed and maintained Android chat application using Kotlin and Java.",
           "Collaborated with cross-functional teams to define, design, and ship new features.",
@@ -124,6 +125,7 @@ export const userData = {
       two: {
         title: "Front End Developer Intern",
         date: `August 2023 - September 2023 (${monthCalculator('2023-08-01', '2023-09-30')} months)`,
+        project: "Admin Dashboard",
         responsibilities: [
           "Fixed broken links, ensuring a seamless user experience.",
           "Conducted a comprehensive front-end cleanup to improve website functionality.",
