@@ -951,6 +951,11 @@ body.dark .project-button {
   color: var(--clr-grey-2);
 }
 
+body.dark .project-button:hover {
+  background-color: var(--clr-grey-7);
+  color: var(--clr-white);
+}
+
 /* Media query for medium screens */
 @media (max-width: 992px) {
   .projects {
@@ -980,6 +985,14 @@ Contacts
   z-index: 1; 
 }
 
+body.dark .contact {
+  background: #333;;
+}
+
+body.dark .github {
+  background-color: var(--clr-black);
+}
+
 .contact h1 {
   margin: 0; 
   color: var(--clr-grey-3);
@@ -1001,6 +1014,18 @@ Contacts
   color: var(--clr-grey-3);
   font-size: 1rem;
   font-weight: 400;
+}
+
+body.dark .contact h1 {
+  color: var(--clr-grey-10);
+}
+
+body.dark .contact h3 {
+  color: var(--clr-grey-10);
+}
+
+body.dark .contact h5 {
+  color: var(--clr-grey-10);
 }
 
 .contact-content {
@@ -1069,8 +1094,9 @@ Footer
   display: flex;
   position: relative;
   justify-content: space-between;
+  border-top: 1px solid var(--clr-grey-8);
   align-items: center;
-  padding: 10px 20px; /* Default padding */
+  padding: 10px 20px; 
   background-color: #f1f1f1; 
 }
 

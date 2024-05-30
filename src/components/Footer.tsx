@@ -2,12 +2,14 @@ import React from 'react';
 import { userData } from '../data/data';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className='footer'>
-        <span className='footer-name'>{userData.name}</span>
+        <h4 className='footer-name'>{userData.name}</h4>
         <div className='footer-right'>
-          <span>Item 1</span>
-          <span>Copy right</span>
+          <h4>Item 1</h4>
+          <h4>&copy; {currentYear} {userData.name}. All rights reserved.</h4>
         </div>
     </div>
   )
