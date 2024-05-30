@@ -14,8 +14,8 @@ const Contact = () => {
             <h5>You can also find me on these platforms:</h5>
             <div className="icons">
               <a href="mailto:joshlanuevo11@gmail.com" className="icon-link gmail"><FaEnvelope size={30} /></a>
-              <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className="icon-link linkedin"><FaLinkedin size={30} /></a>
-              <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer" className="icon-link github"><FaGithub size={30} /></a>
+              <a href="https://www.linkedin.com/in/josh-ivan-lanuevo-3802ab287/" target="_blank" rel="noopener noreferrer" className="icon-link linkedin"><FaLinkedin size={30} /></a>
+              <a href="https://github.com/Joshlanuevo" target="_blank" rel="noopener noreferrer" className="icon-link github"><FaGithub size={30} /></a>
             </div>
           </div>
         </div>

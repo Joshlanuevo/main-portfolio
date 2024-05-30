@@ -1,18 +1,21 @@
 import React from 'react';
 import { userData } from '../data/data';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className='footer'>
-        <h4 className='footer-name'>{userData.name}</h4>
-        <div className='footer-right'>
-          <h4>Item 1</h4>
-          <h4>&copy; {currentYear} {userData.name}. All rights reserved.</h4>
-        </div>
+    <div className='footer' id='footer'>
+      <div className='footer-container'>
+        <h4 className='footer-left'>&copy; {currentYear} {userData.name}.</h4>
+        <h4 className='footer-right'>
+          <FontAwesomeIcon icon={faMapMarkerAlt} className='fa-map-marker-alt' /> Philippines
+        </h4>
+      </div>
     </div>
-  )
+  );
 }
 
 export default Footer;
