@@ -883,3 +883,49 @@ Contacts
 .portfolio-contact {
   margin-top: 900px;
 }
+
+/*
+=============== 
+Footer
+===============
+*/
+
+.footer {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Default padding */
+  background-color: #f1f1f1; 
+}
+
+.footer-name {
+  flex: 1;
+}
+
+.footer-right {
+  display: flex;
+  gap: 20px; 
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .footer {
+    padding: 10px 50px; /* Adjust padding for larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    padding: 10px 100px; /* Adjust padding for even larger screens */
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer {
+    padding: 10px 350px; /* Original padding for very large screens */
+  }
+}
+
+

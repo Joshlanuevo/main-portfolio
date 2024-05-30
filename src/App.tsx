@@ -7,6 +7,7 @@ import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -45,6 +46,11 @@ function App() {
         <div className="portfolio-contact">
           <Contact />
         </div>
+      </div>
+
+      {/* Footer */}
+      <div className="portfolio-footer">
+        <Footer />
       </div>
       </Router>
     </>
