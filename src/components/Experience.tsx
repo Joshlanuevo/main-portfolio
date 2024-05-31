@@ -1,6 +1,4 @@
-import React from 'react';
 import { userData } from '../data/data';
-import { FaBriefcase } from "react-icons/fa";
 
 const Experience = () => {
   const { experience } = userData;

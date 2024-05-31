@@ -1,4 +1,3 @@
-import React from 'react';
 import { userData } from '../data/data';
 
 const About = () => {
@@ -44,7 +43,7 @@ const About = () => {
                 <div
                   key={index}
                   className="tech-item"
-                  style={{ borderLeft: `6px solid ${categoryColors[tech.category]}` }}
+                  style={{ borderLeft: `6px solid ${categoryColors[tech.category as keyof typeof categoryColors]}` }}
                 >
                   <img src={tech.icon} alt={tech.name} className="tech-icon" />
                   <p>{tech.name}</p>

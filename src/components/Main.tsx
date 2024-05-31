@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import BgParticles from './BgParticles';
 import BgCircle from './BgCircle';

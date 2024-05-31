@@ -1,5 +1,3 @@
-import React from 'react'
-
 const BgCircle = () => {
   return (
     <div className='circle-container'>

@@ -1,17 +1,10 @@
-import React from "react";
-import { FaBehance, FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { differenceInMonths, differenceInDays } from 'date-fns';
 
 type Link = {
   id: number;
   url: string;
   text: string;
-};
-
-type Social = {
-  id: number;
-  url: string;
-  icon: JSX.Element;
 };
 
 export const links: Link[] = [
