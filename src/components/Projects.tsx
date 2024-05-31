@@ -2,9 +2,20 @@ import React from 'react';
 import projectOneImage from '../images/project-images/mern-homework.jpg';
 import projectTwoImage from '../images/project-images/5j-company.jpg';
 import projectThreeImage from '../images/project-images/e-portfolio.jpg';
+import projectFourImage from '../images/project-images/portfolio-2023.png';
 
-const Projects = () => {
-  const projectList = [
+interface Project {
+  image: string;
+  name: string;
+  description: string;
+  techUsed: string[];
+  link: string;
+  type: string;
+  date: string;
+}
+
+const Projects: React.FC = () => {
+  const projectList: Project[] = [
     {
       image: projectOneImage,
       name: 'Mern Homework',
@@ -32,9 +43,20 @@ const Projects = () => {
       type: 'Schoolwork',
       date: 'December 2022'
     },
+    {
+      image: projectFourImage,
+      name: 'Portfolio',
+      description: 'This is my 2023 portfolio version.',
+      techUsed: ['NextJS', 'TailwindCSS'],
+      link: 'https://josh-ivan.vercel.app/',
+      type: 'Personal Project',
+      date: 'March 2023'
+    },
   ];
 
-  const ProjectCard = ({ image, name, description, techUsed, link, type, date }) => {
+  const sortedProjectList = projectList.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+
+  const ProjectCard: React.FC<Project> = ({ image, name, description, techUsed, link, type, date }) => {
     return (
       <div className='project-card'>
         <img src={image} alt={`${name} screenshot`} className='project-image' />
@@ -55,7 +77,7 @@ const Projects = () => {
       <h1>Projects</h1>
       <div className="underline"></div>
       <div className='project-list'>
-        {projectList.map((project, index) => (
+        {sortedProjectList.map((project, index) => (
           <ProjectCard
             key={index}
             image={project.image}

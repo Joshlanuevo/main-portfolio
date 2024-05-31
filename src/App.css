@@ -542,7 +542,33 @@ body.dark .underline {
 
 .tech-item p {
   margin: 0;
+  font-size: 11px;
+}
+
+.tech-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.dot-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.dot-title {
   font-size: 14px;
+  text-align: center;
 }
 
 /* Dark mode styles for the About section */
@@ -591,6 +617,7 @@ body.dark .tech-item {
     width: calc(33.33% - 20px); 
   }
 }
+
 
 /*
 =============== 
@@ -1082,6 +1109,10 @@ body.dark .footer {
 .footer h4 {
   font-weight: 450;
   font-size: 14px;
+  color: var(--clr-grey-4);
+}
+body.dark .footer h4 {
+  color: var(--clr-grey-8);
 }
 .footer-container {
   max-width: 1170px;
