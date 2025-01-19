@@ -1,5 +1,4 @@
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { differenceInMonths, differenceInDays } from 'date-fns';
 
 type Link = {
   id: number;
