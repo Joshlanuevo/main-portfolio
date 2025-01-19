@@ -53,24 +53,24 @@ export const social = [
   }
 ];
 
-const monthCalculator = (startDate: string, endDate: string = new Date().toISOString()) => {
-  const start = new Date(startDate);
-  const end = new Date(endDate);
+// const monthCalculator = (startDate: string, endDate: string = new Date().toISOString()) => {
+//   const start = new Date(startDate);
+//   const end = new Date(endDate);
 
-  let months = differenceInMonths(end, start);
-  const startPlusMonths = new Date(start);
-  startPlusMonths.setMonth(start.getMonth() + months);
+//   let months = differenceInMonths(end, start);
+//   const startPlusMonths = new Date(start);
+//   startPlusMonths.setMonth(start.getMonth() + months);
 
-  if (startPlusMonths > end) {
-    months -= 1;
-  }
+//   if (startPlusMonths > end) {
+//     months -= 1;
+//   }
 
-  const daysInMonth = new Date(end.getFullYear(), end.getMonth() + 1, 0).getDate();
-  const daysDifference = differenceInDays(end, startPlusMonths);
-  const fractionOfMonth = daysDifference / daysInMonth;
+//   const daysInMonth = new Date(end.getFullYear(), end.getMonth() + 1, 0).getDate();
+//   const daysDifference = differenceInDays(end, startPlusMonths);
+//   const fractionOfMonth = daysDifference / daysInMonth;
 
-  return Math.round(months + fractionOfMonth); 
-};
+//   return Math.round(months + fractionOfMonth); 
+// };
 
 export const userData = {
   name: "Josh Ivan Lanuevo",
@@ -106,28 +106,40 @@ export const userData = {
   experience: {
     jobs: {
       one: {
-        title: "Android Developer",
-        date: `November 2023 - Present (${monthCalculator('2023-11-01')} months)`,
-        project: "Chat Application",
+        title: "Junior Android Developer",
+        company: "Squadzip",
+        location: "Remote",
+        date: "August 2024 - January 2025",
+        project: "Android Application",
         responsibilities: [
-          "Developed and maintained Android chat application using Kotlin and Java.",
-          "Collaborated with cross-functional teams to define, design, and ship new features.",
-          "Ensured the performance, quality, and responsiveness of applications.",
-          "Identified and corrected bottlenecks and fix bugs.",
-          "Worked with RESTful APIs to connect Android applications to back-end services."
+          "Focus on bug fixing and feature enhancement to improve app performance and usability",
+          "Collaborate with the API team and project management team to ensure smooth integration and alignment with project goals"
         ],
-        tech: "Kotlin and Java"
+        tech: "Kotlin, Jetpack Compose, MVVM Architecture, Clean Architecture and SOLID Principles"
       },
       two: {
+        title: "Junior Android Developer",
+        company: "Live700 Software Inc.",
+        location: "Onsite",
+        date: "November 2023 - August 2024",
+        project: "Chat Application",
+        responsibilities: [
+          "Modified and maintained a high-performance chat application for Android using Kotlin and Java",
+          "Collaborated with back-end developers to integrate APIs, ensuring smooth data flow and real-time updates"
+        ],
+        tech: "Kotlin, Native XML, and MVVM Architecture"
+      },
+      three: {
         title: "Front End Developer Intern",
-        date: `August 2023 - September 2023 (${monthCalculator('2023-08-01', '2023-09-30')} months)`,
+        company: "Sparkle Star International Corporation",
+        date: "August 2023 - September 2023",
         project: "Admin Dashboard",
         responsibilities: [
-          "Fixed broken links, ensuring a seamless user experience.",
-          "Conducted a comprehensive front-end cleanup to improve website functionality.",
-          "Resolved minor issues on the front end."
+          "Fixed broken links, ensuring a seamless user experience",
+          "Conducted a comprehensive front-end cleanup to improve website functionality",
+          "Resolved minor issues on the front end"
         ],
-        tech: "React and NextJS"
+        tech: "React, JavaScript, TypeScript, and CSS"
       }
     }
   }

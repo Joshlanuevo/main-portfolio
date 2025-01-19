@@ -744,6 +744,12 @@ Experience
   font-weight: bold;
 }
 
+.company-info {
+  font-style: italic;
+  color: #666;
+  margin: 4px 0;
+}
+
 .responsibilities-desc {
   list-style-type: disc; 
   font-size: 16px;
