@@ -120,7 +120,7 @@ export const userData = {
         title: "Junior Android Developer",
         company: "Live700 Software Inc.",
         location: "Onsite",
-        date: "September 2023 - August 2024",
+        date: "October 2023 - August 2024",
         project: "Chat Application",
         responsibilities: [
           "Modified and maintained a high-performance chat application for Android using Kotlin and Java",
