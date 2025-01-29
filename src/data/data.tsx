@@ -73,7 +73,7 @@ export const social = [
 
 export const userData = {
   name: "Josh Ivan Lanuevo",
-  destination: "Android Developer", // "Front End Developer", 
+  destination: "Junior Android Developer", // "Front End Developer", 
   email: "joshlanuevo11@gmail.com",
   phone: "+63 921 457 7200",
   address: "68 Agudo Street. Mandaluyong City",

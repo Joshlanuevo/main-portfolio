@@ -6,7 +6,7 @@ import { userData } from '../data/data';
 
 const Main = () => {
   const [text] = useTypewriter({
-    words: ['Hello, my name is Josh Ivan', 'And I am a Junior Front End Developer'],
+    words: [`Hello, my name is Josh Ivan`, `And I am a ${userData.destination}`],
     loop: true,
     delaySpeed: 3000,
   })
