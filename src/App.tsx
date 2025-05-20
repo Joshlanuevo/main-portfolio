@@ -7,8 +7,15 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Maintenance from './pages/MaintenancePage';
+
+const isMaintenanceMode = import.meta.env.VITE_MAINTENANCE_MODE === 'true';
 
 function App() {
+  if (isMaintenanceMode) {
+    return <Maintenance />;
+  }
+  
   return (
     <>
     <Router>
