@@ -9,7 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Maintenance from './pages/MaintenancePage';
 
-const isMaintenanceMode = import.meta.env.VITE_MAINTENANCE_MODE === 'false';
+const isMaintenanceMode = import.meta.env.VITE_MAINTENANCE_MODE === 'true';
 
 function App() {
   if (isMaintenanceMode) {
